@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Social_Network.WebUI.Controllers
 {
-    [Authorize]
+    [Authorize (Roles ="Home")]
     public class HomeController : Controller
     {
         public IActionResult Index()

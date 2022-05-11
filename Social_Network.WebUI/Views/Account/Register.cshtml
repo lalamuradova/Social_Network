@@ -1,0 +1,75 @@
+﻿@model Social_Network.WebUI.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div class="row">
+    <div class="col-xl-5 d-none d-xl-block p-0 vh-100 bg-image-cover bg-no-repeat" style="background-image: url(&quot;assets/images/login-bg-2.jpg&quot;);"></div>
+    <div class="col-xl-7 vh-100 align-items-center d-flex bg-white rounded-3 overflow-hidden">
+        <div class="card shadow-none border-0 ms-auto me-auto login-card">
+            <div class="card-body rounded-0 text-left">
+                <h2 class="fw-700 display1-size display2-md-size mb-4">Create <br>your account</h2>
+                <form asp-action="Register" asp-controller="Account">
+                    <div class="form-group icon-input mb-3"><i class="font-sm ti-user text-grey-500 pe-0"></i><input asp-for="Username" type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600" placeholder="Your Name">
+                    <span asp-validation-for="Username"></span>
+                    </div>
+                    <div class="form-group icon-input mb-3"><i class="font-sm ti-email text-grey-500 pe-0"></i><input asp-for="Email" type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600" placeholder="Your Email Address"> <span asp-validation-for="Email"></span></div>
+                    <div class="form-group icon-input mb-3"><input asp-for="Password" class="style2-input ps-5 form-control text-grey-900 font-xss ls-3" placeholder="Password"><i class="font-sm ti-lock text-grey-500 pe-0"></i> <span asp-validation-for="Password"></span></div>
+                    <div class="form-check text-left mb-3"><input asp-for="RememberMe" type="checkbox" class="form-check-input mt-2" id="exampleCheck2"><label class="form-check-label font-xsss text-grey-500">Remember Me</label> <span asp-validation-for="RememberMe"></span></div>
+                    <div class="col-sm-12 p-0 text-left">
+                        @*<div class="form-group mb-1"><a href="/register" class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 ">Register</a></div>*@
+                        <div class="form-group mb-1">
+                            <input class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0" type="submit" value="Register" />
+                        </div>
+                        <h6 class="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32">Already have account <a href="/login" class="fw-700 ms-1">Login</a></h6>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@*<div class="row">
+        <div class="col-md-4">
+            <form asp-action="Register">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Username" class="control-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+

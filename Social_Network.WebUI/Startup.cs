@@ -51,7 +51,7 @@ namespace Social_Network.WebUI
 
             app.UseRouting();
 
-
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
