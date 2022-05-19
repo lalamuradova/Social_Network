@@ -14,5 +14,6 @@ namespace Social_Network.WebUI.Entities
         {
 
         }
+        
     }
 }

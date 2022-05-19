@@ -20,6 +20,7 @@ namespace Social_Network.WebUI.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
+
         }
 
         public IActionResult LogIn()

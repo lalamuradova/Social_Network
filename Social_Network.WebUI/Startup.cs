@@ -25,6 +25,15 @@ namespace Social_Network.WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+          //  var a=new LikeService
+          Social_Network.Business
+            services.AddScoped<IPostService, PostService>();
+            //services.AddScoped<IProductDal, EfProductDal>();
+
+            //services.AddScoped<ICategoryService, CategoryManager>();
+            //services.AddScoped<ICategoryDal, EfCategoryDal>();
+
+
             services.AddRazorPages();
 
             services.AddDbContext<CustomIdentityDbContext>(
